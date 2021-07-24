@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --text-font: "Raleway", sans-serif;
+  --main-font: "Nunito", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9feff;
+}
+.container {
+  /* height: 100px; */
+  position: relative;
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+.logo {
+  width: 27%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.text {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.logo img {
+  width: 50px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+nav {
+  width: 27%;
+  display: flex;
+  justify-content: center;
+  /* padding: 20px 0px ; */
+}
+.navbar li {
+  list-style: none;
+  margin: 0px 60px;
+  font-size: 20px;
+  display: inline-block;
+}
+.navbar li a {
+  text-decoration: none;
+  color: black;
+}
+.login-signup {
+  width: 27%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-signup button {
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  padding: 20px 30px;
+  text-transform: uppercase;
+}
+.login {
+  position: relative;
+  left: 25px;
+  background-color: #a8ee80;
+  border-radius: 28px 0px 0px 28px;
+}
+.signup {
+  background-color: rgb(152, 124, 255);
+  border-radius: 28px 0px 0px 28px;
+  z-index: 2;
+}
+.body-container {
+  height: 100vh;
+  width: 100%;
+  /* background-color: #a8ee80; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top {
+  height: 30%;
+  width: 100%;
+}
+.bottom {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.main-txt {
+  font-family: poppins;
+  position: relative;
+  top: 20%;
+}
+.main-txt h1 {
+  font-size: 64px;
+  text-align: center;
+  margin: 20px 0px;
+  color: #50287e;
+  letter-spacing: 4px;
+}
+.main-txt p {
+  font-family: var(--text-font);
+  font-size: 24px;
+  text-align: center;
+  color: #5d5c5e;
+}
+.megainput {
+  position: relative;
+  top: 20%;
+  display: flex;
+}
+.megainput input {
+  border: 2px solid rgba(221, 155, 155, 0.562);
+  border-radius: 12px 0px 0px 12px;
+  padding: 26px 60px;
+  width: 640px;
+  color: #5d5c5e;
+  outline: none;
+  font-size: 16px;
+
+}
+.searchjob {
+  border: 2px solid rgba(152, 124, 255, 0.87);
+  border-radius: 0px 12px 12px 0px;
+  cursor: pointer;
+  padding: 26px 60px;
+  background: transparent;
+  font-size: 16px;
+}
+.megainput input:focus {
+  border: 2px solid rgb(115, 184, 240);
+}
