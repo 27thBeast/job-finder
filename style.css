@@ -37,16 +37,20 @@ body {
   color: white;
 }
 .logo {
-  width: 27%;
+  width: 40%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
 }
 .text {
   display: inline-block;
   margin-left: 20px;
-  font-size: 20px;
-  color: white;
+  font-size: 25px;
+  color: #fc8b8b;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
 }
 .logo img {
   width: 50px;
@@ -56,9 +60,9 @@ body {
   flex-direction: row;
 }
 nav {
-  width: 27%;
+  width: 45%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   /* padding: 20px 0px ; */
 }
 .navbar li {
@@ -71,37 +75,10 @@ nav {
   text-decoration: none;
   color: white;
 }
-.login-signup {
-  width: 27%;
-  display: flex;
-  justify-content: flex-end;
-}
 
-.login-signup button {
-  font-size: 15px;
-  border: none;
-  cursor: pointer;
-  padding: 20px 30px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.login {
-  position: relative;
-  left: 25px;
-  /* background-color: #d3f3c0f1; */
-  border-radius: 28px 0px 0px 28px;
-  color: rgb(152, 124, 255);
-}
-.signup {
-  background-color: rgb(152, 124, 255);
-  border-radius: 28px 0px 0px 28px;
-  z-index: 2;
-  color: white;
-}
 .body-container {
   height: 100vh;
   width: 100%;
-  /* background-color: #a8ee80; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,7 +93,6 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
 .main-txt {
   font-family: poppins;
@@ -127,14 +103,14 @@ nav {
   font-size: 64px;
   text-align: center;
   margin: 20px 0px;
-  color: #cea7fa;
+  color: #fc8b8b;
   letter-spacing: 4px;
 }
 .main-txt p {
   font-family: var(--text-font);
   font-size: 24px;
   text-align: center;
-  color: #fc8b8b;
+  color: #fff;
 }
 .megainput {
   position: relative;
@@ -142,7 +118,7 @@ nav {
   display: flex;
 }
 .megainput input {
-  border: 2px solid rgba(238, 236, 236, 0.562);
+  border: 2px solid #fc8b8b;
   border-radius: 12px 0px 0px 12px;
   padding: 26px 60px;
   width: 640px;
@@ -150,6 +126,7 @@ nav {
   outline: none;
   font-size: 18px;
   background: #f3f3f311;
+  height: 77px;
 }
 .searchjob {
   border: 2px solid rgba(201, 187, 253, 0.87);
@@ -159,101 +136,127 @@ nav {
   background: transparent;
   font-size: 18px;
   color: white;
+  height: 77px;
 }
 .megainput input:focus {
   border: 2px solid rgb(115, 184, 240);
 }
 .searchjob:hover {
-  background-color: #d8fdc3;
+  color: #fc8b8b;
 }
 .megainput input:hover {
-  background-color: rgba(225, 216, 255, 0.87);
+  background-color: rgba(190, 190, 190, 0.274);
+  color: aliceblue;
+}
+.megainput input {
+  box-shadow: 0px 6px 10px rgba(255, 249, 249, 0.2);
+}
+.searchjob {
+  box-shadow: 0px 6px 10px rgba(255, 249, 249, 0.2);
 }
 
-@media screen and (max-width: 1140px) {
+@media (max-width: 1160px) {
   .navbar li {
     margin: 0px 30px;
   }
-  .login-signup button {
-    font-size: 13px;
-    border: none;
-    cursor: pointer;
-    padding: 15px 25px;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .login {
-    left: 20px;
-  }
 }
 
-@media screen and (max-width: 880px) {
+@media (max-width: 940px) {
   .logo img {
-    width: 30px;
+    width: 40px;
   }
-
+  .logo .text {
+    font-size: 20px;
+    font-weight: 600;
+  }
   .navbar li {
     margin: 0px 20px;
-    font-size: 12px;
-  }
-  .login-signup button {
-    font-size: 12px;
-    background-color: transparent;
-    cursor: pointer;
-    border: 1px solid white;
-    padding: 8px 35px;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  .login {
-    left: 40px;
-  }
-  .signup {
-    border-radius: 0px 12px 12px 0px;
   }
   .megainput input {
-    width: 340px;
-    height: 70px;
+    width: 400px;
+  }
+  .megainput .searchjob {
+    width: 170px;
     font-size: 14px;
-  }
-
-  .searchjob {
-    width: 180px;
-    font-size: 13px;
-    height: 70px;
-    font-weight: 500;
-    padding: 10px 50px;
-  }
-  .main-txt h1 {
-    font-size: 54px;
-  }
-  .main-txt p {
-    font-size: 23px;
+    padding: 20px;
   }
 }
+@media (max-width: 670px) {
+  .logo {
+    position: relative;
 
-@media screen and (max-width: 580px) {
-  .logo img {
-    width: 30px;
+    justify-content: center;
+    left: 23%;
   }
-
-  .navbar li:first-child {
-    display: none;
+  .logo img {
+    width: 40px;
+  }
+  .logo .text {
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .navbar li {
+    
     position: relative;
-    left: 120px;
-    margin: 0px 30px;
-    font-size: 14px;
+    top: 60px;
+    right: 4%;
+    font-size: 18px;
   }
-  .login-signup button {
-    display: none;
-    font-size: 12px;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 8px 35px;
-    text-transform: uppercase;
-    font-weight: 700;
+  .main-txt h1 {
+    margin-top: 80px;
+    font-size: 50px;
+  }
+  .main-txt p {
+    font-size: 20px;
+  }
+  .megainput input {
+    width: 300px;
+  }
+  .megainput .searchjob {
+    width: 130px;
+    font-size: 14px;
+    padding: 20px;
+  }
+  .menu-btn {
+    display: flex;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 470px) {
+  .navbar li {
+    display: flex;
+    position: relative;
+    top: 60px;
+    font-size: 18px;
+  }
+  .main-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+  }
+  .main-txt h1 {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .main-txt p {
+    width: 80%;
+    font-size: 16px;
+  }
+  .megainput input {
+    width: 230px;
+    height: 60px;
+    font-size: 13px;
+    padding: 20px 20px;
+  }
+  .megainput .searchjob {
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 10px;
   }
 }
