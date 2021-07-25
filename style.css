@@ -12,6 +12,15 @@
 }
 body {
   background-color: #f9feff;
+  background-image: url("./images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.blurBg {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* -webkit-filter: blur(10px); */
 }
 .container {
   /* height: 100px; */
@@ -19,12 +28,13 @@ body {
   width: 100%;
   padding: 20px 0px;
   display: flex;
-
+  background-color: rgba(0, 0, 0, 0.2);
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
+  color: white;
 }
 .logo {
   width: 27%;
@@ -36,6 +46,7 @@ body {
   display: inline-block;
   margin-left: 20px;
   font-size: 20px;
+  color: white;
 }
 .logo img {
   width: 50px;
@@ -58,7 +69,7 @@ nav {
 }
 .navbar li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .login-signup {
   width: 27%;
@@ -72,17 +83,20 @@ nav {
   cursor: pointer;
   padding: 20px 30px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 .login {
   position: relative;
   left: 25px;
-  background-color: #a8ee80;
+  /* background-color: #d3f3c0f1; */
   border-radius: 28px 0px 0px 28px;
+  color: rgb(152, 124, 255);
 }
 .signup {
   background-color: rgb(152, 124, 255);
   border-radius: 28px 0px 0px 28px;
   z-index: 2;
+  color: white;
 }
 .body-container {
   height: 100vh;
@@ -107,44 +121,139 @@ nav {
 .main-txt {
   font-family: poppins;
   position: relative;
-  top: 20%;
+  top: 45%;
 }
 .main-txt h1 {
   font-size: 64px;
   text-align: center;
   margin: 20px 0px;
-  color: #50287e;
+  color: #cea7fa;
   letter-spacing: 4px;
 }
 .main-txt p {
   font-family: var(--text-font);
   font-size: 24px;
   text-align: center;
-  color: #5d5c5e;
+  color: #fc8b8b;
 }
 .megainput {
   position: relative;
-  top: 20%;
+  top: 30%;
   display: flex;
 }
 .megainput input {
-  border: 2px solid rgba(221, 155, 155, 0.562);
+  border: 2px solid rgba(238, 236, 236, 0.562);
   border-radius: 12px 0px 0px 12px;
   padding: 26px 60px;
   width: 640px;
-  color: #5d5c5e;
+  color: #61536e;
   outline: none;
-  font-size: 16px;
-
+  font-size: 18px;
+  background: #f3f3f311;
 }
 .searchjob {
-  border: 2px solid rgba(152, 124, 255, 0.87);
+  border: 2px solid rgba(201, 187, 253, 0.87);
   border-radius: 0px 12px 12px 0px;
   cursor: pointer;
   padding: 26px 60px;
   background: transparent;
-  font-size: 16px;
+  font-size: 18px;
+  color: white;
 }
 .megainput input:focus {
   border: 2px solid rgb(115, 184, 240);
+}
+.searchjob:hover {
+  background-color: #d8fdc3;
+}
+.megainput input:hover {
+  background-color: rgba(225, 216, 255, 0.87);
+}
+
+@media screen and (max-width: 1140px) {
+  .navbar li {
+    margin: 0px 30px;
+  }
+  .login-signup button {
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .login {
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .logo img {
+    width: 30px;
+  }
+
+  .navbar li {
+    margin: 0px 20px;
+    font-size: 12px;
+  }
+  .login-signup button {
+    font-size: 12px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 8px 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .login {
+    left: 40px;
+  }
+  .signup {
+    border-radius: 0px 12px 12px 0px;
+  }
+  .megainput input {
+    width: 340px;
+    height: 70px;
+    font-size: 14px;
+  }
+
+  .searchjob {
+    width: 180px;
+    font-size: 13px;
+    height: 70px;
+    font-weight: 500;
+    padding: 10px 50px;
+  }
+  .main-txt h1 {
+    font-size: 54px;
+  }
+  .main-txt p {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .logo img {
+    width: 30px;
+  }
+
+  .navbar li:first-child {
+    display: none;
+  }
+
+  .navbar li {
+    position: relative;
+    left: 120px;
+    margin: 0px 30px;
+    font-size: 14px;
+  }
+  .login-signup button {
+    display: none;
+    font-size: 12px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }
